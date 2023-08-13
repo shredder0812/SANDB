@@ -279,7 +279,7 @@ async function main() {
           
         });
       }
-      await insert_query();
+await insert_query();
     //})
 
     await app.post("/jsondata/point", (req, res) => {
