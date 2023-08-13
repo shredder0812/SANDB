@@ -281,7 +281,7 @@ async function main() {
       }
 await insert_query();
     //})
-
+async function getjsondata() {
     await app.post("/jsondata/point", (req, res) => {
       client.query(`select jsondata from public.object_details where classname = 'AcDbPoint'; `, (err, result) => {
         if (!err) {
@@ -337,7 +337,8 @@ await insert_query();
       }
     });
   });
-
+}
+await getjsondata();
 
   });
 }
